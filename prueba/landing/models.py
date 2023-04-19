@@ -5,6 +5,7 @@ from django.db import models
 class Users(models.Model):
     username = models.CharField(max_length=50, null=False)
     password = models.CharField(max_length=50)
+    staff = models.BooleanField(default=False)
 
 class Operations(models.Model):
     dateInit = models.DateField(auto_now=False,auto_now_add=True)
